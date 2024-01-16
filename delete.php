@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $dbHandler = new PDO("mysql:host = mysql; dbname=bugreporter; charset=utf8", "root", "");
+    $dbHandler = new PDO("mysql:host = localhost; dbname=bugreporter; charset=utf8", "root", "qwerty");
     if(isset($_GET['id'])){
         $stmt = $dbHandler->prepare("DELETE FROM bugs WHERE id=:id;");
         $stmt->bindParam(":id", $_GET['id'], PDO::PARAM_INT);

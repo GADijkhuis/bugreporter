@@ -1,7 +1,7 @@
 <?php
 $results = array();
 try{
-    $dbHandler = new PDO("mysql:host = mysql; dbname=bugreporter; charset=utf8", "root", "");
+    $dbHandler = new PDO("mysql:host = localhost; dbname=bugreporter; charset=utf8", "root", "qwerty");
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         if($dbHandler && isset($_POST['product']) && isset($_POST['version']) && isset($_POST['hardware']) && isset($_POST['os']) && isset($_POST['frequency']) && isset($_POST['solution'])&& !empty($_POST['product']) && !empty($_POST['version']) && !empty($_POST['hardware']) && !empty($_POST['os']) && !empty($_POST['frequency']) && !empty($_POST['solution'])){
